@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-14T13:41:28.760454200Z</date>
+  <millis>1671025288760</millis>
+  <nanos>454200</nanos>
+  <sequence>0</sequence>
+  <logger>task2</logger>
+  <level>INFO</level>
+  <class>task4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>%d + %d = %d</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-14T13:57:38.382894100Z</date>
+  <millis>1671026258382</millis>
+  <nanos>894100</nanos>
+  <sequence>0</sequence>
+  <logger>task2</logger>
+  <level>INFO</level>
+  <class>task4</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>2 + 2 = 4</message>
+</record>
+</log>
