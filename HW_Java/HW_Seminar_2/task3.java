@@ -11,34 +11,24 @@
 // Студент Петрова получил 4 по предмету Информатика.
 // Студент Краснов получил 5 по предмету Физика.
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+public class task3
 
-public class task3 {
-    public static void main(String[] args) throws IOException {
-        ArrayList<String> data = new ArrayList<>();
-        File reader = new File("JsonToString.json");
-        Scanner scanner = new Scanner(reader);
-        while (scanner.hasNextLine()) {
-            String temp = scanner.nextLine();
-            if (temp.contains("\"")) {
-                data.add(temp.replace("\"", "")
-                        .replace(":", "")
-                        .replace(",", "")
-                        .strip()
-                        .split(" ")[1]);
-            }
-        }
+{
+    public static void main(String[] args) {
+        String json = "[{\"фамилия\":\"Иванов\",\"оценка\":\"5\",\"предмет\":\"Математика\"}," +
+                "{\"фамилия\":\"Петрова\",\"оценка\":\"4\",\"предмет\":\"Информатика\"}," +
+                "{\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}]";
+        String[] res = json.replaceAll("[^a-zA-Zа-яА-Я0-9:,]", "")
+                .replaceAll("[^a-zA-Zа-яА-Я0-9]", " ")
+                .split(" ");
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < data.size(); i += 3) {
+        for (int i = 0; i < res.length; i += 6) {
             result.append("Студент ")
-                    .append(data.get(i))
+                    .append(res[i + 1])
                     .append(" получил ")
-                    .append(data.get(i + 1))
+                    .append(res[i + 3])
                     .append(" по предмету ")
-                    .append(data.get(i + 2))
+                    .append(res[i + 5])
                     .append(".\n");
         }
         System.out.println(result);
