@@ -17,7 +17,7 @@ public class task2
 public static void main(String[] args) throws IOException 
     {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter massive size: ");
+        System.out.print("Enter array size: ");
         int num = input.nextInt();
         int[] array = new int[num];
         SortMas(array, num);
@@ -29,16 +29,16 @@ public static void main(String[] args) throws IOException
         FileHandler file = new FileHandler("task2_log.xml", true);
         logger.addHandler(file);
         file.setFormatter(new SimpleFormatter());
-        logger.log(Level.INFO, "Massive before: " + Arrays.toString(arr) + "\n");
+        logger.log(Level.INFO, "Array before: " + Arrays.toString(arr) + "\n");
         System.out.println(Arrays.toString(arr));
-        logger.log(Level.INFO, "Massive after: " + Arrays.toString(arr) + "\n");
+        logger.log(Level.INFO, "Array after: " + Arrays.toString(arr) + "\n");
 
         ThreadLocalRandom randomNum = ThreadLocalRandom.current();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (randomNum.nextInt(0, 10));
         }
 
-        logger.log(Level.INFO, "Massive before: " + Arrays.toString(arr) + "\n");
+        logger.log(Level.INFO, "Array before: " + Arrays.toString(arr) + "\n");
 
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
@@ -50,7 +50,7 @@ public static void main(String[] args) throws IOException
                 }
             }
         }
-        logger.log(Level.INFO, "Massive after: " + Arrays.toString(arr) + "\n");
+        logger.log(Level.INFO, "Array after: " + Arrays.toString(arr) + "\n");
         file.close();
     }
 }
