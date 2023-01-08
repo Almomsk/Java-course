@@ -4,7 +4,6 @@
  import java.util.Scanner;
  import java.util.Set;
  
-
  public class Laptop {
 
      private List<Brand> brands;

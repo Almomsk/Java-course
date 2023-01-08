@@ -74,7 +74,7 @@ public class Main {
 
         Laptop FilterLaptop = new Laptop();
 // вызов метода фильтрации по определеннеым параметрам
-        System.out.println("по вашему запросу найдено: " + FilterLaptop.filter(laptop));
+       // System.out.println("по вашему запросу найдено: " + FilterLaptop.filter(laptop));
 
 // вызод метода фильтрации по заданным пользователем критериям
         System.out.println(FilterLaptop.newFilter(laptop));
