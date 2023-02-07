@@ -14,8 +14,6 @@
  // Отфильтровать ноутбуки их первоначального множества и вывести проходящие по
  // условиям.
 
- package HW_Java.HW_Seminar_6;
-
 import java.util.HashSet;
 import java.util.Set;
 

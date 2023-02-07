@@ -1,5 +1,3 @@
-package HW_Java.HW_Seminar_6;
-
 public class Brand {
     private String brand;
     private String country;
